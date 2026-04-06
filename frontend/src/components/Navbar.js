@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 
 export default function Navbar() {
+  const [open, setOpen] = useState(false);
+
   return (
     <nav
       style={{
@@ -15,7 +17,7 @@ export default function Navbar() {
     >
       <div
         className="container flex-between"
-        style={{ padding: "18px 0" }}
+        style={{ padding: "18px 0", position: "relative" }}
       >
         <h2
           style={{
@@ -27,7 +29,7 @@ export default function Navbar() {
           Samara.dev
         </h2>
 
-        <div style={{ display: "flex", gap: "25px" }}>
+        <div className={`nav-menu ${open ? "open" : ""}`}>
           <Link href="/">Home</Link>
           <Link href="/projects">Projetos</Link>
           <Link href="/ai">IA</Link>
@@ -35,6 +37,13 @@ export default function Navbar() {
           <Link href="/software">Software</Link>
           <Link href="/about">Sobre</Link>
           <Link href="/contact">Contato</Link>
+        </div>
+
+        <div
+          className="hamburger"
+          onClick={() => setOpen(!open)}
+        >
+          ☰
         </div>
       </div>
     </nav>

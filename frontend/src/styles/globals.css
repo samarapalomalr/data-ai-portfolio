@@ -34,9 +34,10 @@ body {
 /* ============================= */
 
 .container {
-  width: 90%;
+  width: 100%;
   max-width: 1200px;
   margin: auto;
+  padding: 0 16px;
 }
 
 /* ============================= */
@@ -52,17 +53,17 @@ section {
 /* ============================= */
 
 h1 {
-  font-size: 3rem;
+  font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 700;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: clamp(1.6rem, 4vw, 2rem);
   margin-bottom: 20px;
 }
 
 h3 {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 
 /* ============================= */
@@ -123,6 +124,7 @@ a {
   border-radius: 14px;
   border: 1px solid rgba(255,255,255,0.05);
   transition: all 0.3s ease;
+  width: 100%;
 }
 
 .card:hover {
@@ -157,17 +159,18 @@ a {
 }
 
 /* ============================= */
-/* NAV LINKS */
+/* NAV */
 /* ============================= */
 
-.nav-link {
-  opacity: 0.8;
-  transition: 0.2s;
+.nav-menu {
+  display: flex;
+  gap: 25px;
 }
 
-.nav-link:hover {
-  opacity: 1;
-  color: var(--primary);
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
 /* ============================= */
@@ -184,131 +187,28 @@ footer {
 
 @media (max-width: 768px) {
 
-  h1 {
-    font-size: 2.2rem;
-  }
-
-  h2 {
-    font-size: 1.6rem;
-  }
-
   section {
     padding: 60px 0;
   }
 
+  .nav-menu {
+    position: absolute;
+    top: 70px;
+    right: 16px;
+    background: #020617;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    display: none;
+    width: 220px;
+  }
+
+  .nav-menu.open {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
 }
-
-.ecosystem{
-
-  padding:120px 0;
-  
-  background:linear-gradient(
-  180deg,
-  #020617,
-  #020617,
-  #020617
-  );
-  
-  }
-  
-  .ecosystem h2{
-  
-  font-size:2.4rem;
-  
-  margin-bottom:10px;
-  
-  }
-  
-  .ecosystem-subtitle{
-  
-  margin-bottom:60px;
-  
-  color:var(--text-secondary);
-  
-  }
-  
-  .ecosystem-flow{
-  
-  display:flex;
-  
-  align-items:center;
-  
-  justify-content:space-between;
-  
-  flex-wrap:wrap;
-  
-  gap:20px;
-  
-  }
-  
-  .ecosystem-step{
-  
-  flex:1;
-  
-  min-width:180px;
-  
-  padding:25px;
-  
-  border-radius:14px;
-  
-  background:rgba(15,23,42,0.6);
-  
-  border:1px solid rgba(255,255,255,0.06);
-  
-  transition:0.3s;
-  
-  }
-  
-  .ecosystem-step:hover{
-  
-  transform:translateY(-6px);
-  
-  border:1px solid rgba(56,189,248,0.4);
-  
-  }
-  
-  .ecosystem-arrow{
-  
-  font-size:1.6rem;
-  
-  opacity:0.6;
-  
-  }
-
-  .area-section{
-
-    padding:100px 0;
-    
-    border-top:1px solid rgba(255,255,255,0.05);
-    
-    }
-    
-    .area-layout{
-    
-    max-width:800px;
-    
-    }
-    
-    .area-section h2{
-    
-    margin-bottom:15px;
-    
-    font-size:2rem;
-    
-    }
-    
-    .area-section ul{
-    
-    margin:20px 0;
-    
-    padding-left:18px;
-    
-    color:var(--text-secondary);
-    
-    }
-    
-    .area-section li{
-    
-    margin-bottom:6px;
-    
-    }

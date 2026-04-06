@@ -45,6 +45,7 @@ Clone o repositório
 git clone https://github.com/samarapalomalr/data-ai-portfolio.git
 
 Execute o projeto
+cd frontend 
 npm run dev
 
 # Objetivo do projeto

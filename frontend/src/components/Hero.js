@@ -1,18 +1,17 @@
 import { motion } from "framer-motion";
 
 export default function Hero() {
-
   return (
     <section>
       <div className="container">
-        <div style={{ maxWidth: "750px" }}>
+        <div style={{ maxWidth: "750px", width: "100%" }}>
 
-          {/* Título animado */}
           <motion.h1
             style={{
               background: "var(--gradient)",
               WebkitBackgroundClip: "text",
-              color: "transparent"
+              color: "transparent",
+              lineHeight: "1.2"
             }}
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -21,11 +20,10 @@ export default function Hero() {
             Data Engineering & Artificial Intelligence
           </motion.h1>
 
-          {/* Parágrafo animado */}
           <motion.p
             style={{
               marginTop: "20px",
-              fontSize: "1.1rem",
+              fontSize: "clamp(0.95rem, 2.5vw, 1.1rem)",
               color: "var(--text-secondary)"
             }}
             initial={{ opacity: 0, y: 20 }}
@@ -35,12 +33,19 @@ export default function Hero() {
             Neste portfólio, você encontra meus projetos, informações técnicas sobre cada área em que estou me especializando, além de seções sobre mim e formas de entrar em contato. Aqui você pode explorar meu trabalho, conhecer minhas competências e acompanhar minha evolução em tecnologia e ciência de dados.
           </motion.p>
 
-          {/* Botões animados */}
-          <div style={{ marginTop: "30px", display: "flex", gap: "20px" }}>
+          <div
+            className="hero-buttons"
+            style={{
+              marginTop: "30px",
+              display: "flex",
+              gap: "20px",
+              flexWrap: "wrap"
+            }}
+          >
             <motion.a
               href="/projects"
               className="btn-primary"
-              whileHover={{ scale: 1.1, boxShadow: "0 8px 24px rgba(0,212,255,0.6)" }}
+              whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               Ver Projetos
@@ -51,7 +56,7 @@ export default function Hero() {
               target="_blank"
               className="btn-primary"
               style={{ background: "#1e293b" }}
-              whileHover={{ scale: 1.1, boxShadow: "0 8px 24px rgba(255,110,199,0.6)" }}
+              whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               GitHub

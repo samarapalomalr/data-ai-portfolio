@@ -5,31 +5,33 @@ export default function ProjectCard({ project }) {
       style={{
         display: "flex",
         flexDirection: "column",
+        justifyContent: "space-between",
         height: "100%",
-        justifyContent: "space-between"
+        width: "100%"
       }}
     >
       {/* CONTEÚDO SUPERIOR */}
       <div>
-        <h3>{project.title}</h3>
+        <h3 style={{ lineHeight: "1.3" }}>{project.title}</h3>
 
         <p
           style={{
             marginTop: "12px",
             color: "var(--text-secondary)",
-            lineHeight: "1.5"
+            lineHeight: "1.6",
+            fontSize: "0.95rem"
           }}
         >
           {project.description}
         </p>
       </div>
 
-      {/* TECH CENTRALIZADO */}
+      {/* TECH */}
       <div
         style={{
           display: "flex",
           flexWrap: "wrap",
-          gap: "10px",
+          gap: "8px",
           justifyContent: "center",
           margin: "20px 0"
         }}
@@ -41,11 +43,12 @@ export default function ProjectCard({ project }) {
         ))}
       </div>
 
-      {/* BOTÕES EMBAIXO */}
+      {/* BOTÕES */}
       <div
         style={{
           display: "flex",
-          gap: "15px"
+          gap: "10px",
+          flexWrap: "wrap"
         }}
       >
         <a
@@ -53,6 +56,10 @@ export default function ProjectCard({ project }) {
           href={project.link}
           target="_blank"
           rel="noopener noreferrer"
+          style={{
+            flex: "1",
+            textAlign: "center"
+          }}
         >
           GitHub
         </a>
@@ -60,7 +67,11 @@ export default function ProjectCard({ project }) {
         {project.demo && (
           <a
             className="btn-primary"
-            style={{ background: "#1e293b" }}
+            style={{
+              background: "#1e293b",
+              flex: "1",
+              textAlign: "center"
+            }}
             href={project.demo}
             target="_blank"
             rel="noopener noreferrer"

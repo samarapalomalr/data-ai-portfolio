@@ -1,34 +1,65 @@
 :root{
 
-    /* PRIMARY COLORS */
-    
-    --primary:#38bdf8;
-    --primary-hover:#0ea5e9;
-    
-    /* BACKGROUND */
-    
-    --background:#020617;
-    
-    /* TEXT */
-    
-    --text-primary:#e2e8f0;
-    --text-secondary:#94a3b8;
-    
-    /* CARD */
-    
-    --card-bg:#0f172a;
-    
-    /* BORDERS */
-    
-    --border:rgba(255,255,255,0.08);
-    
-    /* GRADIENT */
-    
-    --gradient: linear-gradient(
-      135deg,
-      #38bdf8,
-      #6366f1,
-      #8b5cf6
-    );
-    
-    }
+  /* PRIMARY COLORS */
+  --primary:#38bdf8;
+  --primary-hover:#0ea5e9;
+
+  /* BACKGROUND */
+  --background:#020617;
+
+  /* TEXT */
+  --text-primary:#e2e8f0;
+  --text-secondary:#94a3b8;
+
+  /* CARD */
+  --card-bg:#0f172a;
+
+  /* BORDERS */
+  --border:rgba(255,255,255,0.08);
+
+  /* GRADIENT */
+  --gradient: linear-gradient(
+    135deg,
+    #38bdf8,
+    #6366f1,
+    #8b5cf6
+  );
+
+}
+
+/* ============================= */
+/* MELHORIAS GLOBAIS */
+/* ============================= */
+
+body {
+  overflow-x: hidden;
+}
+
+/* ============================= */
+/* BUTTON RESPONSIVE */
+/* ============================= */
+
+.btn-primary {
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* ============================= */
+/* CARD RESPONSIVE */
+/* ============================= */
+
+.card {
+  width: 100%;
+}
+
+/* ============================= */
+/* MOBILE AJUSTES */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+  .btn-primary {
+    width: 100%;
+  }
+
+}
