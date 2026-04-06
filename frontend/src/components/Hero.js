@@ -43,7 +43,7 @@ export default function Hero() {
             }}
           >
             <motion.a
-              href="/projects"
+              href="https://data-ai-portfolio-425i.vercel.app/projects"
               className="btn-primary"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
